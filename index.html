@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/style.css" />
+    <title>Encriptador</title>
+  </head>
+  <body>
+    <div class="relative">
+      <header class="absolute top-10 left-10">
+        <img src="./src/imgs/Logo.png" alt="" class="w-[120px] h-12" />
+      </header>
+      <main>
+        <section class="grid grid-cols-[1fr_400px] p-10 h-screen">
+          <div
+            class="flex flex-col justify-between mt-32 ml-[12.5rem] mb-[32px]"
+          >
+            <input
+              type="text"
+              placeholder="Ingrese el texto aqui"
+              class="max-w-[36rem] h-12 text-[2rem] leading-[3rem] text-[#0A3871] bg-[#f3f5f6] placeholder:text-[#0A3871]"
+              id="input-text"
+            />
+            <div class="flex gap-2 absolute bottom-[155px] items-center">
+              <img src="./src/imgs/Vector.png" alt="" class="w-4 h-4" />
+              <p class="">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="w-80 h-[67px] rounded-3xl p-6 bg-[#0A3871] text-base text-white"
+                id="encriptar"
+              >
+                Encriptar
+              </button>
+              <button
+                class="w-80 h-[67px] rounded-3xl p-6 bg-[#D8DFE8] text-base text-[#0A3871]"
+                id="desencriptar"
+              >
+                Desencriptar
+              </button>
+            </div>
+          </div>
+          <div class="w-[25rem] h-full bg-white rounded-[32px] relative">
+            <div
+              class="absolute p-8 h-full flex flex-col justify-between"
+              id="container-text"
+            >
+              <p id="texto-encriptado">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
+                nesciunt a tenetur veniam facere praesentium similique eos,
+                sequi sit fuga, voluptatem distinctio aliquid modi ab sunt optio
+                vitae est obcaecati!
+              </p>
+              <button
+                class="w-[336px] h-[67px] text-[#0A3871] rounded-3xl border-solid border-[1px] border-[#0A3871]"
+                id="copy"
+              >
+                Copiar
+              </button>
+            </div>
+            <div class="absolute top-[243px] left-8" id="container-none-text">
+              <img src="./src/imgs/Muñeco.png" alt="" class="" />
+              <p
+                class="w-[21rem] h-[58px] text-center text-[24px] leading-[28.8px] font-bold mb-4"
+              >
+                Ningún mensaje fue encontrado
+              </p>
+              <p class="w-[21rem] h-12 text-center text-base leading-6">
+                Ingrese el texto que desea encriptar o desencriptar
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
