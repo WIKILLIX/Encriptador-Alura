@@ -13,7 +13,7 @@
 @layer components{
 
  .btn-primary{
-  @apply w-[336px] h-[67px] transition-all duration-200 rounded-3xl active:scale-90 hover:-translate-y-1;
+  @apply w-[336px] h-[67px] transition-all duration-200 rounded-3xl active:scale-90 hover:-translate-y-1  max-[1150px]:w-full;
  }
 
 }

@@ -56,20 +56,26 @@ const encriptarText = () => {
       textTemporal += letra;
     }
   });
+  if (textTemporal === "") {
+    return;
+  }
   arrayListText.push(textTemporal);
+
   escribirTexto();
   validateClass();
 };
 
 const desencriptarText = () => {
-  let temp = input.value;
-
+  textTemporal = input.value;
   for (const object in llaves) {
     if (input.value.includes(llaves[object])) {
-      temp = temp.replaceAll(llaves[object], object);
+      textTemporal = textTemporal.replaceAll(llaves[object], object);
     }
   }
-  arrayListText.push(temp);
+  if (textTemporal === "") {
+    return;
+  }
+  arrayListText.push(textTemporal);
   escribirTexto();
   validateClass();
 };

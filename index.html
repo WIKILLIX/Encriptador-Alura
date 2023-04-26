@@ -7,25 +7,31 @@
     <title>Encriptador</title>
   </head>
   <body>
-    <div class="relative grid grid-cols-[1fr_400px] p-10 h-screen">
+    <div
+      class="relative grid grid-cols-[1fr_minmax(300px,400px)] p-10 h-screen gap-7 max-[1150px]:grid-rows-[1fr_300px] max-[1150px]:grid-cols-1 max-sm:p-0 max-sm:gap-2"
+    >
       <div class="h-full">
-        <header class="absolute top-10 left-10">
+        <header
+          class="absolute top-10 left-10 max-[1150px]:left-0 max-sm:-left-8 max-[1150px]:top-5"
+        >
           <img src="./src/imgs/Logo.png" alt="" class="w-[120px] h-12" />
         </header>
         <section
-          class="flex flex-col justify-between pt-32 pl-[12.5rem] pb-[32px] h-full"
+          class="flex flex-col pt-32 pl-[12.5rem] max-[1375px]:pl-5 pb-[32px] h-full max-[1150px]:pl-2 max-[1150px]:pr-2 max-[1150px]:pb-0 max-[1150px]:pt-20"
         >
           <textarea
             type="text"
             placeholder="Ingrese el texto aqui"
-            class="max-w-[54rem] h-[24rem] text-[2rem] leading-[3rem] text-[#0A3871] bg-[#f3f5f6] placeholder:text-[#0A3871] focus:outline-none focus:placeholder:text-[#f3f5f6]"
+            class="max-w-full h-full text-[2rem] leading-[3rem] text-[#0A3871] bg-[#f3f5f6] placeholder:text-[#0A3871] focus:outline-none focus:placeholder:text-[#f3f5f6] mb-14"
             id="input-text"
           ></textarea>
-          <div class="flex gap-2 absolute bottom-[155px] items-center">
+          <div
+            class="flex gap-2 absolute bottom-[155px] items-center max-[1150px]:bottom-[450px] max-sm:bottom-[463px]"
+          >
             <img src="./src/imgs/Vector.png" alt="" class="w-4 h-4" />
             <p class="">Solo letras minúsculas y sin acentos</p>
           </div>
-          <div class="flex gap-2">
+          <div class="flex gap-2 max-sm:flex-col">
             <button
               class="btn-primary p-6 bg-[#0A3871] text-white"
               id="encriptar"
@@ -42,9 +48,11 @@
         </section>
       </div>
       <section>
-        <div class="w-[25rem] h-full bg-white rounded-[32px] relative">
+        <div
+          class="max-w-[25rem] h-full bg-white rounded-[32px] relative overflow-hidden max-[1150px]:max-w-full max-sm:ml-2 max-sm:mr-2"
+        >
           <div
-            class="absolute p-8 h-full w-full flex flex-col justify-between hidden"
+            class="absolute p-8 h-full w-full flex flex-col justify-between hidden overflow-auto"
             id="container-text"
           >
             <!-- <p id="texto-encriptado" class="text-center"></p> -->
@@ -58,14 +66,23 @@
               Mensaje copiado
             </p>
           </div>
-          <div class="absolute top-[243px] left-8" id="container-none-text">
-            <img src="./src/imgs/Muñeco.png" alt="" class="" />
+          <div
+            class="absolute top-[243px] left-8 max-[1176px]:left-0 max-[1150px]:w-full max-[1150px]:top-1/2 max-[1150px]:-translate-y-1/2 max-[1150px]:left-1/2 max-[1150px]:-translate-x-1/2"
+            id="container-none-text"
+          >
+            <img
+              src="./src/imgs/Muñeco.png"
+              alt=""
+              class="max-[1150px]:hidden"
+            />
             <p
-              class="w-[21rem] h-[58px] text-center text-[24px] leading-[28.8px] font-bold mb-4"
+              class="w-[21rem] h-[58px] text-center text-[24px] leading-[28.8px] font-bold mb-4 max-[1150px]:w-full"
             >
               Ningún mensaje fue encontrado
             </p>
-            <p class="w-[21rem] h-12 text-center text-base leading-6">
+            <p
+              class="w-[21rem] h-12 text-center text-base leading-6 max-[1150px]:w-full"
+            >
               Ingrese el texto que desea encriptar o desencriptar
             </p>
           </div>
